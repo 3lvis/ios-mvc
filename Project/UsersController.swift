@@ -1,9 +1,13 @@
 import UIKit
 
 class UsersController: UITableViewController {
+    lazy var dataSource: [User] = {
+        return User.default
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .red
+        tableView.registerNib(UserCell.self)
     }
 }
