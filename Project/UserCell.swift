@@ -1,5 +1,5 @@
 import UIKit
 
-class UserView: UIView {
+class UserCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
 }

@@ -6,19 +6,37 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9d9-sY-9t1">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="9d9-sY-9t1" customClass="UserCell" customModule="Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="279" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9d9-sY-9t1" id="ehI-wV-sq3">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="279" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCx-1x-00h">
+                        <rect key="frame" x="8" y="8" width="263" height="63.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="jCx-1x-00h" secondAttribute="bottom" id="4he-vy-n30"/>
+                    <constraint firstItem="jCx-1x-00h" firstAttribute="leading" secondItem="ehI-wV-sq3" secondAttribute="leadingMargin" id="6lc-wT-bWz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jCx-1x-00h" secondAttribute="trailing" id="NUV-0S-JML"/>
+                    <constraint firstItem="jCx-1x-00h" firstAttribute="top" secondItem="ehI-wV-sq3" secondAttribute="topMargin" id="aYF-dE-ojK"/>
+                </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-85" y="71"/>
+            <connections>
+                <outlet property="nameLabel" destination="jCx-1x-00h" id="tIX-gL-ao0"/>
+            </connections>
+            <point key="canvasLocation" x="-133.5" y="89"/>
         </tableViewCell>
     </objects>
 </document>
