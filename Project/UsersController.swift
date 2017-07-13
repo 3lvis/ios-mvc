@@ -1,9 +1,7 @@
 import UIKit
 
 class UsersController: UITableViewController {
-    lazy var dataSource: [User] = {
-        return User.default
-    }()
+    private lazy var dataSource = User.default
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,13 +14,11 @@ class UsersController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeue(UserCell.self, for: indexPath)
-    }
-
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let cell = cell as! UserCell
+        let cell = tableView.dequeue(UserCell.self, for: indexPath)
         let name = dataSource[indexPath.row].name
         cell.nameLabel?.text = name
+
+        return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

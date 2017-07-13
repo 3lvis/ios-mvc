@@ -9,13 +9,9 @@ class UserController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder aDecoder: NSCoder) { fatalError() }
 
-    var customView: UserView {
-        return self.view as! UserView
-    }
+    var customView: UserView { return self.view as! UserView }
 
     override func loadView() {
         let view = UIView.instanceFromNib() as UserView

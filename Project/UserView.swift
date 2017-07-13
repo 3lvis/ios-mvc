@@ -1,7 +1,7 @@
 import UIKit
 
 class UserView: UIView {
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
 
     var user: User? {
         didSet {
