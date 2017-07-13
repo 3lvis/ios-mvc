@@ -1,5 +1,11 @@
 import UIKit
 
 class UserCell: UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+
+    var user: User? {
+        didSet {
+            nameLabel.text = user?.name
+        }
+    }
 }

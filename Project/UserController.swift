@@ -11,7 +11,7 @@ class UserController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) { fatalError() }
 
-    var customView: UserView { return self.view as! UserView }
+    private var customView: UserView { return self.view as! UserView }
 
     override func loadView() {
         let view = UIView.instanceFromNib() as UserView

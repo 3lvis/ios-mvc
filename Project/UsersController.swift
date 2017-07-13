@@ -15,8 +15,7 @@ class UsersController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(UserCell.self, for: indexPath)
-        let name = dataSource[indexPath.row].name
-        cell.nameLabel?.text = name
+        cell.user = dataSource[indexPath.row]
 
         return cell
     }
