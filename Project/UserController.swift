@@ -14,7 +14,7 @@ class UserController: UIViewController {
     }
 
     var customView: UserView {
-        return UIView.instanceFromNib() as UserView
+        return self.view as! UserView
     }
 
     override func loadView() {
