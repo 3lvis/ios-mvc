@@ -26,3 +26,13 @@ public extension UITableView {
         return self.dequeueReusableCell(withIdentifier: cellClass.reuseIdentifier, for: indexPath) as! T
     }
 }
+
+extension UIView {
+    /// Helper method to instantiate a nib file.
+    ///
+    /// - Parameter bundle: The bundle where the nib is located, by default we'll use the main bundle.
+    /// - Returns: Returns an instance of the nib as a UIView.
+    class func instanceFromNib<T: UIView>(bundle: Bundle = .main) -> T {
+        return UINib(nibName: String(describing: T.self), bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as! T
+    }
+}

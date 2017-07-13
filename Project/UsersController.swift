@@ -27,5 +27,9 @@ class UsersController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        let user = dataSource[indexPath.row]
+        let controller = UserController(user: user)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
